@@ -38,7 +38,7 @@ export const en = {
         { label: 'Total profile views', value: '3', sup: 'M+' },
         { label: 'Best reel (organic)', value: '2', sup: 'M+' },
         { label: '2nd viral reel', value: '600', sup: 'K+' },
-        { label: '3rd viral reel', value: '20', sup: 'K+' },
+        { label: '3rd viral reel', value: '110', sup: 'K+' },
         { label: 'Content language', value: 'English / Portuguese / Italian', small: true },
       ] as StatItem[],
     },

@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import ThemeRegistry from '@/components/ThemeRegistry';
-import Nav from '@/components/Nav';
-import Footer from '@/components/Footer';
+import Nav from '@/components/nav/Nav';
+import Footer from '@/components/footer/Footer';
 import { dmSans } from '@/lib/fonts';
 import { LangProvider } from '@/lib/i18n/LangContext';
+import LemonCursor from '@/components/cursor/lemonCursor';
 
 export const metadata: Metadata = {
   title: 'Any in Sicily — Creator Kit',
@@ -37,6 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             zIndex: 0,
           }}
         />
+        <LemonCursor />
         <ThemeRegistry>
           <LangProvider>
             <Nav />

@@ -21,7 +21,7 @@ export const pt: Dict = {
         { label: 'Total de visualizações', value: '3', sup: 'M+' },
         { label: 'Melhor reel (orgânico)', value: '2', sup: 'M+' },
         { label: '2º reel viral', value: '600', sup: 'K+' },
-        { label: '3º reel viral', value: '20', sup: 'K+' },
+        { label: '3º reel viral', value: '110', sup: 'K+' },
         { label: 'Idiomas do conteúdo', value: 'Inglês / Português / Italiano', small: true },
       ] as StatItem[],
     },
