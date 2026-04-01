@@ -37,11 +37,11 @@ export const pt: Dict = {
     },
     niches: [
       { icon: '🍋', title: 'Vida de Expat na Itália', desc: 'Bastidores de viver no sul da Itália — o bonito, o burocrático, o inesperado.' },
-      { icon: '✈️', title: 'Viagem pela Sicília', desc: 'Dicas de insider, lugares escondidos, cultura local e experiências autênticas além do circuito turístico.' },
+      { icon: '✈️', title: 'Viagem', desc: 'Dicas de insider, lugares escondidos, cultura local e experiências autênticas além do circuito turístico.' },
       { icon: '💡', title: 'Recomeçar do Zero', desc: 'Storytelling honesto sobre perder emprego e reconstruir. Alta ressonância emocional — viral comprovado.' },
       { icon: '🌍', title: 'Humor Cultural', desc: 'Comédia intercultural — brasileira na Itália. Alta compartilhabilidade entre audiências europeias.' },
       { icon: '💻', title: 'Vida Digital & Apps', desc: 'Apps, trabalho remoto, tech para expats — como dev frontend, falo essa língua fluentemente.' },
-      { icon: '🛒', title: 'Reviews & Lifestyle', desc: 'Reviews autênticas de produtos — comida italiana, apps essenciais para expats, vida cotidiana na Sicília.' },
+      { icon: '🛒', title: 'Reviews & Unboxing', desc: 'Reviews autênticas de produtos — comida italiana, apps essenciais para expats, coisas de garotas, vida cotidiana na Sicília.' },
     ],
     formats: [
       { n: '01', title: 'Reels Talking Head', desc: 'Storytelling direto para a câmera. Meu formato viral comprovado. Alta identificação, gancho forte, entrega autêntica.' },

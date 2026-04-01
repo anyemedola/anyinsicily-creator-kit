@@ -54,11 +54,11 @@ export const en = {
     },
     niches: [
       { icon: '🍋', title: 'Expat Life in Italy', desc: 'Behind the scenes of living in southern Italy — the beautiful, the bureaucratic, the unexpected.' },
-      { icon: '✈️', title: 'Sicily Travel', desc: 'Insider tips, hidden gems, local culture and authentic experiences beyond the tourist trail.' },
+      { icon: '✈️', title: 'Travel', desc: 'Insider tips, hidden gems, local culture and authentic experiences beyond the tourist trail.' },
       { icon: '💡', title: 'Starting Over', desc: 'Honest storytelling about losing a job and rebuilding. High emotional resonance — proven viral.' },
       { icon: '🌍', title: 'Cultural Humor', desc: 'Cross-cultural comedy — Brazilian in Italy. High shareability across European audiences.' },
       { icon: '💻', title: 'Digital Life & Tools', desc: 'Apps, remote work, tech for expats — as a frontend dev, I speak this language fluently.' },
-      { icon: '🛒', title: 'Reviews & Lifestyle', desc: 'Authentic product reviews — Italian food, expat-essential apps, everyday life in Sicily.' },
+      { icon: '🛒', title: 'Reviews & Unboxing', desc: 'Authentic product reviews — Italian food, expat-essential apps, girly stuffs, everyday life in Sicily.' },
     ],
     formats: [
       { n: '01', title: 'Talking Head Reels', desc: 'Direct-to-camera storytelling. My proven viral format. High relatability, strong hook, authentic delivery.' },
