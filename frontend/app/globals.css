@@ -1,0 +1,25 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --color-primary: #d9a3aa;
+  --color-secondary: #c8e2e6;
+  --color-accent: #99705a;
+  --color-background: #f7f2f1;
+  --color-text: #292327;
+
+  --color-surface: #fffafb;
+  --color-border: #eadbde;
+  --color-muted: #7b7174;
+
+  --color-primary-hover: #c291a4;
+  --color-secondary-soft: #e8f2f4;
+  --color-accent-soft: #c9ae9b;
+}
