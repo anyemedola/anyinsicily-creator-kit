@@ -10,6 +10,9 @@ import LemonCursor from '@/components/cursor/lemonCursor';
 export const metadata: Metadata = {
   title: 'Any in Sicily — Creator Kit',
   description: 'UGC Creator Portfolio — Brazilian content creator based in Sicily',
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
