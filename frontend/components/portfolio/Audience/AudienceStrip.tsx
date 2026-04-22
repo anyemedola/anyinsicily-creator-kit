@@ -1,19 +1,23 @@
 'use client';
 
+import '@/components/translator-i18n/i18n';
 import * as S from './styles';
-import { useLang } from '@/lib/i18n/LangContext';
+import { useTranslation } from 'react-i18next';
 
 export default function AudienceStrip() {
-  const { dict } = useLang();
-  const { audience } = dict.home;
+  const { t } = useTranslation();
+  const heading = t('home.audience.heading');
+  const headingLine2 = t('home.audience.headingLine2');
+  const headingEm = t('home.audience.headingEm');
+  const labels = t('home.audience.labels', { returnObjects: true }) as string[];
 
   return (
     <S.Strip>
       <S.Heading>
-        {audience.heading}<br />{audience.headingLine2}<br /><em>{audience.headingEm}</em>
+        {heading}<br />{headingLine2}<br /><em>{headingEm}</em>
       </S.Heading>
       <S.Pills>
-        {audience.labels.map((label) => (
+        {labels.map((label) => (
           <S.Pill key={label}>{label}</S.Pill>
         ))}
       </S.Pills>

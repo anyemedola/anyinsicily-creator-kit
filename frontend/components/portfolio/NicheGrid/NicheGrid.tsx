@@ -1,14 +1,22 @@
 'use client';
 
+import '@/components/translator-i18n/i18n';
 import * as S from './styles';
-import { useLang } from '@/lib/i18n/LangContext';
+import { useTranslation } from 'react-i18next';
+
+interface Niche {
+  icon: string;
+  title: string;
+  desc: string;
+}
 
 export default function NicheGrid() {
-  const { dict } = useLang();
+  const { t } = useTranslation();
+  const niches = t('home.niches', { returnObjects: true }) as Niche[];
 
   return (
     <S.Grid>
-      {dict.home.niches.map(({ icon, title, desc }) => (
+      {niches.map(({ icon, title, desc }) => (
         <S.Card key={title}>
           <S.Icon>{icon}</S.Icon>
           <S.Title>{title}</S.Title>

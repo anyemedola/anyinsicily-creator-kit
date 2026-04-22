@@ -4,16 +4,16 @@ import { playfair, dmMono } from '@/lib/fonts';
 
 export const Grid = styled('div')({
     display: 'grid',
-    gridTemplateColumns: 'repeat(4, 1fr)',
-    gap: 12,
+    gridTemplateColumns: 'repeat(2, 1fr)',
+    gap: 16,
     marginBottom: 48,
     '@media (max-width: 600px)': {
-        gridTemplateColumns: 'repeat(2, 1fr)',
+        gridTemplateColumns: '1fr',
     },
 });
 
 export const Card = styled('div')<{ gradient: string }>(({ gradient }) => ({
-    aspectRatio: '9/14',
+    height: 480,
     borderRadius: 14,
     background: gradient,
     position: 'relative',
@@ -29,6 +29,11 @@ export const Card = styled('div')<{ gradient: string }>(({ gradient }) => ({
     '&:hover': {
         transform: 'scale(1.025)',
     },
+    '& .video': {
+  width: '100%',
+  height: '100%',
+  objectFit: 'cover',
+},
 }));
 
 export const Content = styled('div')({
@@ -36,14 +41,14 @@ export const Content = styled('div')({
     bottom: 0,
     left: 0,
     right: 0,
-    padding: '14px 12px',
+    padding: '18px 16px',
     zIndex: 2,
 });
 
 export const Badge = styled('div')({
     display: 'inline-block',
-    background: palette.pink,
-    color: palette.charcoal,
+    background: palette.lemon,
+    color: palette.white,
     fontFamily: dmMono.style.fontFamily,
     fontSize: 8,
     letterSpacing: '0.1em',
@@ -70,8 +75,20 @@ export const ViewsLabel = styled('div')({
 });
 
 export const Topic = styled('div')({
-    fontSize: 11,
-    color: 'rgba(255,255,255,0.75)',
+    fontSize: 13,
+    fontWeight: 600,
+    color: 'rgba(255,255,255,0.9)',
     marginTop: 6,
     lineHeight: 1.4,
+});
+
+export const Detail = styled('p')({
+    fontSize: 11,
+    color: 'rgba(255,255,255,0.76)',
+    marginTop: 8,
+    lineHeight: 1.45,
+    '& strong': {
+        color: 'white',
+        fontWeight: 600,
+    },
 });

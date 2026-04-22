@@ -20,12 +20,12 @@ export const Card = styled('div')({
     minHeight: 148,
     position: 'relative',
     transition: 'box-shadow 0.2s',
-    '&:hover': { boxShadow: '0 4px 16px rgba(196,120,74,0.1)' },
+    '&:hover': { boxShadow: '0 4px 16px rgba(196,53,96,0.12)' },
 });
 
 export const RestCard = styled('div')({
     background: 'transparent',
-    border: `1px dashed #EEDDD5`,
+    border: `1px dashed ${palette.border}`,
     borderRadius: 12,
     minHeight: 148,
     display: 'flex',
@@ -39,7 +39,7 @@ export const RestLabel = styled('div')({
     fontSize: 9,
     letterSpacing: '0.1em',
     textTransform: 'uppercase',
-    color: '#CDBBB0',
+    color: palette.textLight,
     writingMode: 'vertical-rl',
 });
 
@@ -53,10 +53,10 @@ export const DayName = styled('div')({
 });
 
 export const typeColors: Record<ContentType, { bg: string; color: string }> = {
-    reel: { bg: 'rgba(212,113,123,0.15)', color: palette.rose },
-    stories: { bg: 'rgba(143,175,138,0.15)', color: palette.sage },
-    carousel: { bg: 'rgba(201,169,110,0.15)', color: palette.gold },
-    ugc: { bg: 'rgba(196,120,74,0.15)', color: palette.terra },
+    reel: { bg: 'rgba(196,53,96,0.14)', color: palette.lemonDeep },
+    stories: { bg: 'rgba(110,207,184,0.18)', color: palette.seaDark },
+    carousel: { bg: 'rgba(110,207,184,0.15)', color: palette.olive },
+    ugc: { bg: 'rgba(196,53,96,0.15)', color: palette.terra },
     rest: { bg: 'transparent', color: 'transparent' },
 };
 
@@ -102,5 +102,5 @@ export const Cta = styled('div')({
     right: 12,
     fontFamily: dmMono.style.fontFamily,
     fontSize: 8,
-    color: palette.rose,
+    color: palette.lemon,
 });

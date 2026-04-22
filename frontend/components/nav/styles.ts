@@ -7,7 +7,7 @@ export const NavRoot = styled('nav')({
     position: 'sticky',
     top: 0,
     zIndex: 200,
-    background: 'rgba(253,240,239,0.92)',
+    background: 'rgba(255,247,250,0.92)',
     backdropFilter: 'blur(12px)',
     borderBottom: `1px solid ${palette.border}`,
     display: 'flex',
@@ -18,16 +18,43 @@ export const NavRoot = styled('nav')({
     },
 });
 
-export const NavLogo = styled('div')({
+export const NavLogo = styled('a')({
     fontFamily: playfair.style.fontFamily,
     fontStyle: 'italic',
     fontSize: 15,
-    color: palette.rose,
+    color: palette.lemon,
     marginRight: 'auto',
     whiteSpace: 'nowrap',
     padding: '16px 0',
+    textDecoration: 'none',
     '@media (max-width: 600px)': {
         fontSize: 12,
+    },
+});
+
+export const InstagramBtn = styled('a')({
+    background: palette.lemon,
+    border: `1px solid ${palette.lemon}`,
+    borderRadius: 6,
+    color: palette.white,
+    fontFamily: dmMono.style.fontFamily,
+    fontSize: 9,
+    letterSpacing: '0.14em',
+    textTransform: 'uppercase',
+    textDecoration: 'none',
+    padding: '5px 10px',
+    marginLeft: 12,
+    cursor: 'pointer',
+    transition: 'all 0.2s',
+    '&:hover': {
+        background: palette.sea,
+        borderColor: palette.sea,
+        color: palette.charcoal,
+    },
+    '@media (max-width: 600px)': {
+        marginLeft: 6,
+        padding: '4px 7px',
+        fontSize: 8,
     },
 });
 
@@ -36,8 +63,8 @@ export const NavLink = styled(Link, {
 })<{ active?: boolean }>(({ active }) => ({
     background: 'none',
     border: 'none',
-    borderBottom: active ? `2px solid ${palette.rose}` : '2px solid transparent',
-    color: active ? palette.rose : palette.textLight,
+    borderBottom: active ? `2px solid ${palette.lemon}` : '2px solid transparent',
+    color: active ? palette.lemon : palette.textLight,
     fontFamily: dmMono.style.fontFamily,
     fontSize: 10,
     letterSpacing: '0.14em',
@@ -49,7 +76,7 @@ export const NavLink = styled(Link, {
     whiteSpace: 'nowrap',
     display: 'inline-block',
     '&:hover': {
-        color: palette.rose,
+        color: palette.lemon,
     },
     '@media (max-width: 600px)': {
         fontSize: 9,
@@ -71,8 +98,8 @@ export const LangBtn = styled('button')({
     cursor: 'pointer',
     transition: 'all 0.2s',
     '&:hover': {
-        borderColor: palette.rose,
-        color: palette.rose,
+        borderColor: palette.lemon,
+        color: palette.lemon,
     },
     '@media (max-width: 600px)': {
         marginLeft: 6,

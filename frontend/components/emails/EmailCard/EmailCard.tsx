@@ -1,15 +1,30 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import '@/components/translator-i18n/i18n';
+import { useMemo, useState } from 'react';
 import * as S from './styles';
-import { useLang } from '@/lib/i18n/LangContext';
-import { type Segment } from '@/lib/i18n/en';
+import { useTranslation } from 'react-i18next';
+
+interface Segment {
+  type: 'text' | 'strong' | 'placeholder';
+  content: string;
+}
 
 interface EmailCardProps {
   tag: string;
   subject: string;
   segments: Segment[];
   signature: string;
+}
+
+interface CreatorProfile {
+  name: string;
+  handle: string;
+  location: string;
+  audience: string;
+  contentStyle: string;
+  metrics: string;
+  link: string;
 }
 
 const nicheParams: Record<string, { niche: string }> = {
@@ -34,36 +49,119 @@ function isBrandPlaceholder(content: string) {
   return lower.includes('brand') || lower.includes('product') || lower.includes('produto');
 }
 
-function resolveSegment(seg: Segment, contactName: string, brand: string): string {
-  if (seg.type !== 'placeholder') return seg.content;
-  if (isNamePlaceholder(seg.content)) return contactName || seg.content;
+function isCreatorNamePlaceholder(content: string) {
+  const lower = content.toLowerCase();
+  return lower.includes('creator name') || lower.includes('nome do creator') || lower.includes('seu nome');
+}
+
+function isHandlePlaceholder(content: string) {
+  const lower = content.toLowerCase();
+  return lower.includes('handle') || lower.includes('arroba');
+}
+
+function isLocationPlaceholder(content: string) {
+  const lower = content.toLowerCase();
+  return lower.includes('location') || lower.includes('localização') || lower.includes('cidade');
+}
+
+function replaceCreatorTokens(content: string, creator: CreatorProfile) {
+  return content
+    .replace(/\[Creator Name\]|\[Nome do creator\]|\[Seu nome\]/g, creator.name || '$&')
+    .replace(/\[Handle\]|\[Arroba\]/g, creator.handle || '$&')
+    .replace(/\[Location\]|\[Localização\]/g, creator.location || '$&')
+    .replace(/\[audience\]|\[audiência\]/gi, creator.audience || '$&')
+    .replace(/\[content style\]|\[estilo de conteúdo\]/gi, creator.contentStyle || '$&')
+    .replace(/\[key metric\]|\[métrica principal\]|\[Métrica\]/gi, creator.metrics || '$&');
+}
+
+function buildSignature(creator: CreatorProfile, fallbackSignature: string) {
+  const name = creator.name.trim();
+  const handle = creator.handle.trim();
+  const location = creator.location.trim();
+  const link = creator.link.trim();
+
+  if (!name && !handle && !location && !link) return replaceCreatorTokens(fallbackSignature, creator);
+
+  const lines = [
+    'Best,',
+    name || '[Creator Name]',
+    [handle, location].filter(Boolean).join(' | '),
+    link,
+  ].filter(Boolean);
+
+  return lines.join('\n');
+}
+
+function looksLikeTemplateSignature(content: string) {
+  const lower = content.toLowerCase();
+  return (
+    lower.includes('[creator name]') ||
+    lower.includes('[nome do creator]') ||
+    lower.includes('[handle]') ||
+    lower.includes('[arroba]') ||
+    lower.includes('[portfolio / link]') ||
+    lower.trim().startsWith('best,') ||
+    lower.trim().startsWith('warmly,') ||
+    lower.trim().startsWith('regards,') ||
+    lower.trim().startsWith('abraços,') ||
+    lower.trim().startsWith('com carinho,') ||
+    lower.includes('@anyinsicily') ||
+    lower.includes('beacons.ai/anyinsicily')
+  );
+}
+
+function removeTrailingTemplateSignature(segments: Segment[]) {
+  let end = segments.length;
+
+  while (end > 0 && looksLikeTemplateSignature(segments[end - 1].content)) {
+    end -= 1;
+  }
+
+  return segments.slice(0, end);
+}
+
+function stripSignatureBlock(content: string) {
+  return content
+    .replace(/(?:^|\n)\s*(?:best|warmly|regards|cheers|abraços|com carinho),\s*[\s\S]*$/i, '')
+    .trimEnd();
+}
+
+function resolveSegment(seg: Segment, contactName: string, brand: string, creator: CreatorProfile): string {
+  if (seg.type !== 'placeholder') return replaceCreatorTokens(seg.content, creator);
+  if (isCreatorNamePlaceholder(seg.content)) return creator.name || seg.content;
+  if (isHandlePlaceholder(seg.content)) return creator.handle || seg.content;
+  if (isLocationPlaceholder(seg.content)) return creator.location || seg.content;
   if (isBrandPlaceholder(seg.content)) return brand || seg.content;
+  if (isNamePlaceholder(seg.content)) return contactName || seg.content;
   return seg.content;
 }
 
 export default function EmailCard({ tag, subject: initialSubject, segments: initialSegments, signature: initialSignature }: EmailCardProps) {
-  const { dict } = useLang();
-  const { card } = dict.emails;
+  const { t } = useTranslation();
 
   const [copied, setCopied] = useState(false);
   const [generating, setGenerating] = useState(false);
   const [segments, setSegments] = useState<Segment[]>(initialSegments);
   const [subject, setSubject] = useState(initialSubject);
-  const [signature, setSignature] = useState(initialSignature);
   const [contactName, setContactName] = useState('');
   const [brand, setBrand] = useState('');
+  const [creator, setCreator] = useState<CreatorProfile>({
+    name: '',
+    handle: '',
+    location: '',
+    audience: '',
+    contentStyle: '',
+    metrics: '',
+    link: '',
+  });
 
-  const sigRef = useRef<HTMLTextAreaElement>(null);
-
-  useEffect(() => {
-    if (sigRef.current) {
-      sigRef.current.style.height = 'auto';
-      sigRef.current.style.height = sigRef.current.scrollHeight + 'px';
-    }
-  }, [signature]);
+  const visibleSegments = useMemo(() => removeTrailingTemplateSignature(segments), [segments]);
+  const signature = buildSignature(creator, initialSignature);
 
   const getPlainText = () => {
-    const body = segments.map((s) => resolveSegment(s, contactName, brand)).join('');
+    const body = stripSignatureBlock(
+      visibleSegments.map((s) => resolveSegment(s, contactName, brand, creator)).join('')
+    );
     return `${body.trim()}\n\n${signature}`;
   };
 
@@ -84,9 +182,10 @@ export default function EmailCard({ tag, subject: initialSubject, segments: init
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          template: { tag, subject, segments },
+          template: { tag, subject, segments: visibleSegments },
           brand: brand || '[Brand]',
           contactName: contactName || '[Name]',
+          creator,
           subject,
           signature,
           niche: params.niche,
@@ -113,65 +212,122 @@ export default function EmailCard({ tag, subject: initialSubject, segments: init
         <S.SubjectInput
           value={subject}
           onChange={(e) => setSubject(e.target.value)}
-          placeholder="Subject line..."
+          placeholder={t('emails.card.subjectPlaceholder')}
         />
       </S.Header>
 
       <S.FieldsPanel>
         <S.FieldRow>
-          <S.FieldLabel>Para / To</S.FieldLabel>
+          <S.FieldLabel>{t('emails.card.toLabel')}</S.FieldLabel>
           <S.FieldInput
             type="text"
-            placeholder="Name / Marketing Team"
+            placeholder={t('emails.card.toPlaceholder')}
             value={contactName}
             onChange={(e) => setContactName(e.target.value)}
           />
         </S.FieldRow>
         <S.FieldRow>
-          <S.FieldLabel>Marca / Brand</S.FieldLabel>
+          <S.FieldLabel>{t('emails.card.brandLabel')}</S.FieldLabel>
           <S.FieldInput
             type="text"
-            placeholder="Brand name"
+            placeholder={t('emails.card.brandPlaceholder')}
             value={brand}
             onChange={(e) => setBrand(e.target.value)}
+          />
+        </S.FieldRow>
+        <S.FieldRow>
+          <S.FieldLabel>{t('emails.card.creatorNameLabel')}</S.FieldLabel>
+          <S.FieldInput
+            type="text"
+            placeholder={t('emails.card.creatorNamePlaceholder')}
+            value={creator.name}
+            onChange={(e) => setCreator((current) => ({ ...current, name: e.target.value }))}
+          />
+        </S.FieldRow>
+        <S.FieldRow>
+          <S.FieldLabel>{t('emails.card.handleLabel')}</S.FieldLabel>
+          <S.FieldInput
+            type="text"
+            placeholder={t('emails.card.handlePlaceholder')}
+            value={creator.handle}
+            onChange={(e) => setCreator((current) => ({ ...current, handle: e.target.value }))}
+          />
+        </S.FieldRow>
+        <S.FieldRow>
+          <S.FieldLabel>{t('emails.card.locationLabel')}</S.FieldLabel>
+          <S.FieldInput
+            type="text"
+            placeholder={t('emails.card.locationPlaceholder')}
+            value={creator.location}
+            onChange={(e) => setCreator((current) => ({ ...current, location: e.target.value }))}
+          />
+        </S.FieldRow>
+        <S.FieldRow>
+          <S.FieldLabel>{t('emails.card.linkLabel')}</S.FieldLabel>
+          <S.FieldInput
+            type="text"
+            placeholder={t('emails.card.linkPlaceholder')}
+            value={creator.link}
+            onChange={(e) => setCreator((current) => ({ ...current, link: e.target.value }))}
+          />
+        </S.FieldRow>
+        <S.FieldRow wide>
+          <S.FieldLabel>{t('emails.card.audienceLabel')}</S.FieldLabel>
+          <S.FieldInput
+            type="text"
+            placeholder={t('emails.card.audiencePlaceholder')}
+            value={creator.audience}
+            onChange={(e) => setCreator((current) => ({ ...current, audience: e.target.value }))}
+          />
+        </S.FieldRow>
+        <S.FieldRow wide>
+          <S.FieldLabel>{t('emails.card.contentStyleLabel')}</S.FieldLabel>
+          <S.FieldInput
+            type="text"
+            placeholder={t('emails.card.contentStylePlaceholder')}
+            value={creator.contentStyle}
+            onChange={(e) => setCreator((current) => ({ ...current, contentStyle: e.target.value }))}
+          />
+        </S.FieldRow>
+        <S.FieldRow wide>
+          <S.FieldLabel>{t('emails.card.metricsLabel')}</S.FieldLabel>
+          <S.FieldInput
+            type="text"
+            placeholder={t('emails.card.metricsPlaceholder')}
+            value={creator.metrics}
+            onChange={(e) => setCreator((current) => ({ ...current, metrics: e.target.value }))}
           />
         </S.FieldRow>
       </S.FieldsPanel>
 
       <S.Body>
-        {segments.map((seg, i) => {
+        {visibleSegments.map((seg, i) => {
           if (seg.type === 'strong') {
             const text = brand
               ? seg.content.replace(/\[Brand\]|\[Brand\/Product\]|\[Product\]|\[Produto\]|\[Brand\/Produto\]/g, brand)
               : seg.content;
-            return <strong key={i}>{text}</strong>;
+            return <strong key={i}>{replaceCreatorTokens(text, creator)}</strong>;
           }
           if (seg.type === 'placeholder') {
-            const resolved = resolveSegment(seg, contactName, brand);
+            const resolved = resolveSegment(seg, contactName, brand, creator);
             if (resolved !== seg.content) {
               return <S.FilledValue key={i}>{resolved}</S.FilledValue>;
             }
             return <S.Placeholder key={i}>{seg.content}</S.Placeholder>;
           }
-          return <span key={i}>{seg.content}</span>;
+          const content = i === visibleSegments.length - 1 ? stripSignatureBlock(seg.content) : seg.content;
+          return <span key={i}>{content}</span>;
         })}
 
-        <S.SignatureDivider>
-          <S.SignatureInput
-            ref={sigRef}
-            value={signature}
-            onChange={(e) => setSignature(e.target.value)}
-            rows={1}
-          />
-        </S.SignatureDivider>
+        <S.SignaturePreview>{signature}</S.SignaturePreview>
       </S.Body>
 
       <S.Actions>
         <S.GenerateBtn onClick={handleGenerate} disabled={generating}>
-          {generating ? card.generating : card.generate}
+          {generating ? t('emails.card.generating') : t('emails.card.generate')}
         </S.GenerateBtn>
         <S.CopyBtn copied={copied} onClick={handleCopy}>
-          {copied ? card.copied : card.copy}
+          {copied ? t('emails.card.copied') : t('emails.card.copy')}
         </S.CopyBtn>
       </S.Actions>
     </S.Card>

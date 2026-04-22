@@ -1,17 +1,18 @@
 'use client';
 
 import * as S from './styles';
-import { useLang } from '@/lib/i18n/LangContext';
+import { useTranslation } from 'react-i18next';
+import Translator from '@/components/translator-i18n';
 
 export default function TipsBox() {
-  const { dict } = useLang();
-  const { tips } = dict.emails;
+  const { t } = useTranslation();
+  const items = t('emails.tips.items', { returnObjects: true }) as string[];
 
   return (
     <S.Box>
-      <S.Title>{tips.title}</S.Title>
+      <S.Title><Translator path="emails.tips.title" /></S.Title>
       <S.List>
-        {tips.items.map((tip) => (
+        {items.map((tip) => (
           <S.Item key={tip}>{tip}</S.Item>
         ))}
       </S.List>

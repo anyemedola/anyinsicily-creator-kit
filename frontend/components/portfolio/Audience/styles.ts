@@ -2,7 +2,7 @@ import { styled } from '@mui/material/styles';
 import { playfair } from '@/lib/fonts';
 
 export const Strip = styled('div')({
-    background: 'linear-gradient(120deg, #F2C4C4 0%, #E8A0A0 40%, #D4717B 100%)',
+    background: 'linear-gradient(120deg, #6ECFB8 0%, #2E8E79 50%, #C43560 100%)',
     borderRadius: 16,
     padding: '32px 36px',
     display: 'grid',
@@ -10,7 +10,7 @@ export const Strip = styled('div')({
     gap: 32,
     alignItems: 'center',
     marginBottom: 40,
-    boxShadow: '0 8px 32px rgba(212,113,123,0.22)',
+    boxShadow: '0 8px 32px rgba(196,53,96,0.18)',
     '@media (max-width: 600px)': {
         gridTemplateColumns: '1fr',
         gap: 20,
@@ -35,8 +35,8 @@ export const Pills = styled('div')({
 });
 
 export const Pill = styled('span')({
-    background: 'rgba(255,252,250,0.25)',
-    border: '1px solid rgba(255,252,250,0.4)',
+    background: 'rgba(255,252,250,0.2)',
+    border: '1px solid rgba(255,252,250,0.35)',
     color: 'white',
     fontSize: 11,
     padding: '6px 13px',

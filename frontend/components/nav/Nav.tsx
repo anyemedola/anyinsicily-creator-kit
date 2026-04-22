@@ -1,28 +1,49 @@
 'use client';
 
 import * as S from './styles';
+import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
-import { useLang } from '@/lib/i18n/LangContext';
+import { useTranslation } from 'react-i18next';
+import Translator from '@/components/translator-i18n';
+
+const INSTAGRAM_URL = 'https://www.instagram.com/anyinsicily/';
 
 export default function Nav() {
   const pathname = usePathname();
-  const { dict, toggleLang } = useLang();
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    const saved = localStorage.getItem('locale');
+    if (saved && saved !== i18n.language) i18n.changeLanguage(saved);
+  }, [i18n]);
 
   const navItems = [
-    { label: dict.nav.portfolio, href: '/' },
-    { label: dict.nav.pitchEmails, href: '/emails' },
-    { label: dict.nav.calendar, href: '/calendar' },
+    { labelKey: 'nav.portfolio', href: '/' },
+    { labelKey: 'nav.pitchEmails', href: '/emails' },
+    { labelKey: 'nav.calendar', href: '/calendar' },
   ];
+
+  const switchLabel = i18n.language === 'en' ? 'PT' : 'EN';
+  const toggleLang = () => {
+    const next = i18n.language === 'en' ? 'pt' : 'en';
+    i18n.changeLanguage(next);
+    localStorage.setItem('locale', next);
+  };
 
   return (
     <S.NavRoot>
-      <S.NavLogo>Any in Sicily ✦</S.NavLogo>
-      {navItems.map(({ label, href }) => (
+      <S.NavLogo href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">
+        Any in Sicily
+      </S.NavLogo>
+      {navItems.map(({ labelKey, href }) => (
         <S.NavLink key={href} href={href} active={pathname === href}>
-          {label}
+          <Translator path={labelKey} />
         </S.NavLink>
       ))}
-      <S.LangBtn onClick={toggleLang}>{dict.nav.switchLang}</S.LangBtn>
+      <S.InstagramBtn href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">
+        Instagram
+      </S.InstagramBtn>
+      <S.LangBtn onClick={toggleLang}>{switchLabel}</S.LangBtn>
     </S.NavRoot>
   );
 }

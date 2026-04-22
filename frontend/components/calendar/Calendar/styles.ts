@@ -15,7 +15,7 @@ export const H2 = styled('h2')({
     marginBottom: 12,
     '& em': {
         fontStyle: 'italic',
-        color: palette.rose,
+        color: palette.lemon,
     },
 });
 

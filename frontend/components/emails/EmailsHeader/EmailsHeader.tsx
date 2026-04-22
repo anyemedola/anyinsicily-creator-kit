@@ -1,21 +1,16 @@
 'use client';
 
 import * as S from './styles';
-import { useLang } from '@/lib/i18n/LangContext';
+import Translator from '@/components/translator-i18n';
 
 export default function EmailsHeader() {
-  const { dict } = useLang();
-  const { header } = dict.emails;
-
   return (
     <S.Root>
       <S.H2>
-        {header.title}<br /><em>{header.titleEm}</em>
+        <Translator path="emails.header.title" /><br /><em><Translator path="emails.header.titleEm" /></em>
       </S.H2>
       <S.Lead>
-        {header.lead}{' '}
-        <S.Highlight>{header.highlight}</S.Highlight>{' '}
-        {header.leadEnd}
+        <Translator path="emails.header.lead" />
       </S.Lead>
     </S.Root>
   );

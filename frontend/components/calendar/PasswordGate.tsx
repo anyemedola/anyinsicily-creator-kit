@@ -1,11 +1,14 @@
 'use client';
 
+import '@/components/translator-i18n/i18n';
 import { useState, type ReactNode } from 'react';
+import { useTranslation } from 'react-i18next';
 import { palette } from '@/lib/theme';
 
 const SESSION_KEY = 'calendar_unlocked';
 
 export default function PasswordGate({ children }: { children: ReactNode }) {
+  const { t } = useTranslation();
   const [unlocked, setUnlocked] = useState(
     () => sessionStorage.getItem(SESSION_KEY) === '1'
   );
@@ -63,7 +66,7 @@ export default function PasswordGate({ children }: { children: ReactNode }) {
           maxWidth: 360,
           width: '100%',
           textAlign: 'center',
-          boxShadow: '0 4px 24px rgba(196,120,74,0.08)',
+          boxShadow: '0 4px 24px rgba(196,53,96,0.08)',
         }}
       >
         <div style={{ fontSize: 36, marginBottom: 12 }}>🔒</div>
@@ -75,7 +78,7 @@ export default function PasswordGate({ children }: { children: ReactNode }) {
             margin: '0 0 8px',
           }}
         >
-          Conteúdo restrito
+          {t('passwordGate.title')}
         </h2>
         <p
           style={{
@@ -84,7 +87,7 @@ export default function PasswordGate({ children }: { children: ReactNode }) {
             marginBottom: '1.5rem',
           }}
         >
-          Insira a senha para acessar o calendário.
+          {t('passwordGate.desc')}
         </p>
         <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
           <input
@@ -94,13 +97,13 @@ export default function PasswordGate({ children }: { children: ReactNode }) {
               setInput(e.target.value);
               setError(false);
             }}
-            placeholder="Senha"
+            placeholder={t('passwordGate.placeholder')}
             autoFocus
             disabled={loading}
             style={{
               padding: '0.75rem 1rem',
               borderRadius: 10,
-              border: `1.5px solid ${error ? palette.rose : palette.border}`,
+              border: `1.5px solid ${error ? palette.terra : palette.border}`,
               fontSize: '1rem',
               outline: 'none',
               background: palette.warmBg,
@@ -110,8 +113,8 @@ export default function PasswordGate({ children }: { children: ReactNode }) {
             }}
           />
           {error && (
-            <p style={{ color: palette.rose, fontSize: '0.8rem', margin: 0 }}>
-              Senha incorreta. Tente novamente.
+            <p style={{ color: palette.terra, fontSize: '0.8rem', margin: 0 }}>
+              {t('passwordGate.error')}
             </p>
           )}
           <button
@@ -121,15 +124,15 @@ export default function PasswordGate({ children }: { children: ReactNode }) {
               padding: '0.75rem',
               borderRadius: 10,
               border: 'none',
-              background: palette.rose,
+              background: palette.lemon,
               color: palette.white,
-              fontWeight: 600,
+              fontWeight: 700,
               fontSize: '0.95rem',
               cursor: loading ? 'default' : 'pointer',
               opacity: loading ? 0.7 : 1,
             }}
           >
-            {loading ? 'Verificando...' : 'Entrar'}
+            {loading ? t('passwordGate.loading') : t('passwordGate.submit')}
           </button>
         </form>
       </div>

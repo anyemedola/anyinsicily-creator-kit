@@ -1,0 +1,288 @@
+{
+  "nav": {
+    "portfolio": "Portfolio",
+    "pitchEmails": "Pitch Emails",
+    "calendar": "Calendar"
+  },
+  "home": {
+    "eyebrow": "UGC Creator Portfolio — 2026",
+    "viralContent": "Content Case Studies",
+    "contentNiches": "Content Niches",
+    "availableFormats": "Available Formats",
+    "hero": {
+      "lead": "Brazilian creator in Sicily turning Italian phrases, culture shock, expat life and Mediterranean travel into sharp, funny English-language Reels for people who love Italy beyond the postcard.",
+      "statsTitle": "Metrics · @anyinsicily",
+      "stats": [
+        { "label": "Total profile views", "value": "4", "sup": "M+" },
+        { "label": "Best reel (organic)", "value": "3", "sup": "M+" },
+        { "label": "2nd viral reel", "value": "754", "sup": "K+" },
+        { "label": "3rd viral reel", "value": "291", "sup": "K+" },
+        { "label": "Content language", "value": "English / Portuguese / Italian", "small": true }
+      ]
+    },
+    "proof": {
+      "label": "Portfolio proof",
+      "kicker": "How I work",
+      "title": "Content should work, not just look good.",
+      "lead": "From real situations to scalable formats. Clear thinking, no extra steps.",
+      "items": [
+        {
+          "label": "Thinking",
+          "title": "Relatable moments",
+          "desc": "Turn everyday situations into instant recognition. From real life abroad — small, specific, familiar."
+        },
+        {
+          "label": "Problem",
+          "title": "Attention that feels natural.",
+          "desc": "Content people don’t skip. Blends into the feed before it sells."
+        },
+        {
+          "label": "Range",
+          "title": "Ideas that scale",
+          "desc": "One concept, multiple directions. Series, reviews, guides, integrations."
+        },
+        {
+          "label": "Brand",
+          "title": "A clear point of view",
+          "desc": "Consistent voice over time. Observational, useful, real."
+        }
+      ]
+    },
+    "audience": {
+      "heading": "Who",
+      "headingLine2": "watches",
+      "headingEm": "Any.",
+      "labels": [
+        "Italy lovers", "Sicily-curious travellers", "Culture humor fans", "English-speaking",
+        "Aspiring expats", "Brazilian diaspora EU", "Language learners", "Digital nomads",
+        "Female-majority", "High share intent", "Values real personality"
+      ]
+    },
+    "niches": [
+      { "icon": "🍋", "title": "Italian Phrase Comedy", "desc": "Italian moments people instantly recognize. Built for shares and series." },
+      { "icon": "✈️", "title": "Sicily Travel & Local Life", "desc": "Daily life in Sicily, beyond the postcard. Where brands fit naturally." },
+      { "icon": "💡", "title": "Starting Over Abroad", "desc": "Real moments of building a life abroad. Honest, relatable, ongoing." },
+      { "icon": "🌍", "title": "Brazilian POV in Italy", "desc": "The small cultural differences that stand out. Funny, specific, real." },
+      { "icon": "💻", "title": "Digital Life & Useful Tools", "desc": "What actually helps when living abroad. Simple, useful, saveable." },
+      { "icon": "🛒", "title": "Lifestyle Reviews", "desc": "Things I actually use in daily life. Integrated, not staged." }
+    ],
+    "formats": [
+      { "n": "01", "title": "Phrase-led Reels", "desc": "Relatable Italian moments built into series. My strongest, most recognizable format." },
+      { "n": "02", "title": "POV / Day-in-Sicily", "desc": "Real daily life, not curated travel. Where brands fit naturally." },
+      { "n": "03", "title": "Honest Review / Real Take", "desc": "Opinions with humor and context. Feels personal, not scripted." },
+      { "n": "04", "title": "Brazil vs Italy Comparison", "desc": "Fast cultural contrasts between Brazilian and Italian habits, language and daily life." }
+    ],
+    "viral": {
+      "viewsLabel": "views",
+      "hookLabel": "Hook",
+      "insightLabel": "Why it works",
+      "brandFitLabel": "Brand fit",
+      "cases": [
+        {
+          "badge": "Series Proof",
+          "topic": "Phrase-led Reels",
+          "hook": "\"In Italy we say...\"",
+          "insight": "High-share format: language + identity + humor in the first seconds.",
+          "brandFit": "Adaptable for travel apps, food brands, language tools and lifestyle products."
+        },
+        {
+          "badge": "Test Angle",
+          "topic": "POV / Day-in-Sicily",
+          "hook": "A simple Friday morning in Sicily.",
+          "insight": "Nothing dramatic — just a real moment people want to be in. Creates a calm, “wish I was there” feeling.",
+          "brandFit": "Travel, lifestyle, wellness, and fashion brands that fit into real routines."
+        },
+        {
+          "badge": "Case Study",
+          "topic": "Honest Review / Real Take",
+          "hook": "Parking here makes no sense — but it works.",
+          "insight": "A real opinion mixed with humor and context. Feels like a conversation, not a script.",
+          "brandFit": "Brands that value authenticity and personality-driven content."
+        },
+        {
+          "badge": "Viral Format",
+          "topic": "Brazil vs Italy Comparison",
+          "hook": "Things I stopped doing after moving to Sicily.",
+          "insight": "Shows cultural differences through real behavior changes. People relate, reflect, and often save or share.",
+          "brandFit": "Travel, lifestyle, and expat-focused brands."
+        }
+      ]
+    }
+  },
+  "emails": {
+    "eyebrow": "Ready Templates",
+    "header": {
+      "title": "Pitch Emails",
+      "titleEm": "for Brands",
+      "lead": "Fill in your creator profile, brand, audience, style and metrics. The subject and email body update from your information, then you can generate a sharper version with AI.",
+      "highlight": "",
+      "leadEnd": ""
+    },
+    "card": {
+      "copy": "Copy Email",
+      "copied": "✓ Copied!",
+      "generate": "Generate with AI",
+      "generating": "Generating...",
+      "toLabel": "To",
+      "brandLabel": "Brand",
+      "toPlaceholder": "Name / Marketing Team",
+      "brandPlaceholder": "Brand name",
+      "creatorNameLabel": "Your name",
+      "creatorNamePlaceholder": "e.g. Alex",
+      "subjectPlaceholder": "Generated subject line",
+      "handleLabel": "Your handle",
+      "handlePlaceholder": "e.g. @alexcreates",
+      "locationLabel": "Location",
+      "locationPlaceholder": "e.g. Lisbon, Portugal",
+      "linkLabel": "Link",
+      "linkPlaceholder": "Portfolio, media kit, link in bio or WhatsApp",
+      "audienceLabel": "Audience",
+      "audiencePlaceholder": "e.g. Gen Z travellers, new expats, food lovers",
+      "contentStyleLabel": "Content style",
+      "contentStylePlaceholder": "e.g. funny Reels, honest reviews, aesthetic B-roll",
+      "metricsLabel": "Metrics",
+      "metricsPlaceholder": "e.g. 25K followers, 1.2M monthly views, 8% engagement",
+      "signatureLabel": "Editable signature",
+      "signaturePlaceholder": "Add your name, handle, portfolio link, location or WhatsApp"
+    },
+    "tips": {
+      "title": "✦ Sending Tips",
+      "items": [
+        "Find the Marketing Manager or Brand Partnerships name on LinkedIn before sending — greatly increases response rate",
+        "Send to direct emails (name@company.com), not the generic contact@company.com",
+        "Add 2–3 metric screenshots or a link to this portfolio",
+        "Follow up in 5–7 days if no reply — most conversions come on the second contact",
+        "Start with small and medium brands — easier to close and builds your UGC portfolio",
+        "Offer a first gifted video for smaller brands — makes it easier to start and test the partnership"
+      ]
+    },
+    "templates": [
+      {
+        "tag": "💳 Fintech / Expat Services — Wise, Revolut, N26",
+        "subject": "Subject: UGC x [Brand] | [Creator Niche] Creator | [Key Metric]",
+        "segments": [
+          { "type": "text", "content": "Hi " },
+          { "type": "placeholder", "content": "[Name / Marketing Team]" },
+          { "type": "text", "content": ",\n\nI'm " },
+          { "type": "placeholder", "content": "[Creator Name]" },
+          { "type": "text", "content": " — a UGC/content creator based in " },
+          { "type": "placeholder", "content": "[Location]" },
+          { "type": "text", "content": ". I create " },
+          { "type": "strong", "content": "[content style]" },
+          { "type": "text", "content": " for " },
+          { "type": "strong", "content": "[audience]" },
+          { "type": "text", "content": ". My current metrics are " },
+          { "type": "strong", "content": "[key metric]" },
+          { "type": "text", "content": ", and my audience actively saves, shares and uses tools that make money, travel or life abroad easier.\n\n" },
+          { "type": "strong", "content": "Why " },
+          { "type": "placeholder", "content": "[Brand]" },
+          { "type": "strong", "content": " makes sense for my audience:" },
+          { "type": "text", "content": "\nYour product fits naturally into the kind of content my audience already watches: practical tools, money decisions, travel planning, relocation, international payments, budgeting or everyday problem-solving.\n\n" },
+          { "type": "strong", "content": "What I'm offering:" },
+          { "type": "text", "content": "\n→ 1 x Reel/TikTok with a native hook + natural product integration\n→ 1 x Story sequence with link or CTA\n→ Raw files included for your brand to repurpose\n\n" },
+          { "type": "strong", "content": "3 content ideas I have for " },
+          { "type": "placeholder", "content": "[Brand]" },
+          { "type": "strong", "content": ":" },
+          { "type": "text", "content": "\n1. \"3 money mistakes I wish I avoided sooner\" — [Product] as the practical solution\n2. \"The app/tool that makes [audience problem] easier\" — authentic list format\n3. \"Before vs after using [Brand]\" — problem/solution Reel built for saves\n\nHappy to share my rate card and discuss. Would love to explore this together!" }
+        ],
+        "signature": "Best,\n[Creator Name]\n[Handle] | [Portfolio / Link]"
+      },
+      {
+        "tag": "✈️ Travel / Accommodation — Booking, Airbnb, Omio, Trainline",
+        "subject": "Subject: UGC x [Brand] | Travel Creator for [Audience]",
+        "segments": [
+          { "type": "text", "content": "Hi " },
+          { "type": "placeholder", "content": "[Name]" },
+          { "type": "text", "content": ",\n\nMy name is " },
+          { "type": "placeholder", "content": "[Creator Name]" },
+          { "type": "text", "content": " — a creator based in " },
+          { "type": "placeholder", "content": "[Location]" },
+          { "type": "text", "content": " creating " },
+          { "type": "strong", "content": "[content style]" },
+          { "type": "text", "content": " for " },
+          { "type": "strong", "content": "[audience]" },
+          { "type": "text", "content": ". My current metrics are " },
+          { "type": "strong", "content": "[key metric]" },
+          { "type": "text", "content": ", and my audience actively saves travel, accommodation and planning content.\n\nI'd love to create UGC for " },
+          { "type": "placeholder", "content": "[Brand]" },
+          { "type": "text", "content": " that feels genuinely useful rather than like an ad.\n\n" },
+          { "type": "strong", "content": "Content I could create:" },
+          { "type": "text", "content": "\n1. \"Things nobody tells you before booking [destination/trip type]\" — naturally integrating " },
+          { "type": "placeholder", "content": "[Brand]" },
+          { "type": "text", "content": " as the tool I use\n2. \"A realistic travel day using [Brand]\" — POV format with booking moments shown naturally\n3. \"How I would plan this trip differently next time\" — useful, saveable travel Reel with brand CTA\n\nMy content performs best when it feels honest, useful and native to the platform — exactly what travel audiences trust. I produce and deliver raw + edited video files you can use across your channels.\n\nWould you be open to a quick call or want me to send my rate card?" }
+        ],
+        "signature": "[Creator Name]\n[Handle] | [Location]"
+      },
+      {
+        "tag": "🫒 Italian Food & Lifestyle — olive oils, pasta, regional brands",
+        "subject": "Subject: UGC x [Brand] | Food & Lifestyle Creator | [Audience]",
+        "segments": [
+          { "type": "text", "content": "Hi " },
+          { "type": "placeholder", "content": "[Name]" },
+          { "type": "text", "content": ",\n\nI'm " },
+          { "type": "placeholder", "content": "[Creator Name]" },
+          { "type": "text", "content": " — a content creator based in " },
+          { "type": "placeholder", "content": "[Location]" },
+          { "type": "text", "content": " making " },
+          { "type": "strong", "content": "[content style]" },
+          { "type": "text", "content": " for " },
+          { "type": "strong", "content": "[audience]" },
+          { "type": "text", "content": ". My current metrics are " },
+          { "type": "strong", "content": "[key metric]" },
+          { "type": "text", "content": ".\n\nI'm reaching out because I think " },
+          { "type": "placeholder", "content": "[Brand/Product]" },
+          { "type": "text", "content": " would resonate genuinely with my audience — people who love Italy, are curious about the culture, or are already living here.\n\n" },
+          { "type": "strong", "content": "What makes my content different:" },
+          { "type": "text", "content": "\nMy content works because it feels native to my audience: personal, useful, visually clear and built around real lifestyle moments rather than forced ads.\n\n" },
+          { "type": "strong", "content": "What I can create:" },
+          { "type": "text", "content": "\n→ \"You need to try " },
+          { "type": "placeholder", "content": "[Product]" },
+          { "type": "text", "content": "\" — hook-led format with product integration\n→ A recipe, meal, routine or daily-life moment featuring your product\n→ \"What [Product] adds to my [routine/travel/hosting/food] life\" — lifestyle storytelling\n\nContent can be produced for organic posting, paid ads or whitelisting. Usage rights can be included depending on scope." }
+        ],
+        "signature": "Warmly,\n[Creator Name]\n[Handle]"
+      }
+    ]
+  },
+  "calendar": {
+    "eyebrow": "Content Strategy",
+    "header": {
+      "title": "Calendar",
+      "titleEm": "2 Weeks",
+      "lead": "Week 1 focuses on regaining momentum with proven viral formats. Week 2 activates monetization channels. 5 posts per week, 2 rest days."
+    },
+    "week1Label": "Week 1 — Regaining momentum",
+    "week2Label": "Week 2 — Monetization + Funnel",
+    "strategy": "Strategy",
+    "week1": [
+      { "day": "Mon", "type": "reel", "title": "Italian phrase series", "hook": "\"In Italy we say...\" new version with a gesture, expression or daily-life moment", "cta": "→ Instagram" },
+      { "day": "Tue", "type": "stories", "title": "Behind the scenes + Poll", "hook": "\"Which Italian expression should I explain next?\" + question box" },
+      { "day": "Wed", "type": "reel", "title": "Brazilian in Sicily POV", "hook": "\"Things that still confuse me in Italy\" — relatable culture shock", "cta": "→ link bio" },
+      { "day": "Thu", "type": "rest", "title": "", "hook": "", "isRest": true },
+      { "day": "Fri", "type": "carousel", "title": "5 things nobody tells you about Sicily", "hook": "Saveable mini guide for travellers and future expats", "cta": "→ guide" },
+      { "day": "Sat", "type": "reel", "title": "Sicily town POV", "hook": "\"A normal day here looks fake\" — local-life travel Reel" },
+      { "day": "Sun", "type": "rest", "title": "", "hook": "", "isRest": true }
+    ],
+    "week2": [
+      { "day": "Mon", "type": "reel", "title": "\"In Brazil we say / in Italy we say\"", "hook": "Language contrast — high shareability", "cta": "→ Instagram" },
+      { "day": "Tue", "type": "stories", "title": "Travel Q&A", "hook": "\"Ask me anything about Sicily\" — collect FAQs for guides", "cta": "→ guide" },
+      { "day": "Wed", "type": "reel", "title": "Italian market POV", "hook": "\"I went to the market and accidentally learned a new word\" — cross-cultural humor" },
+      { "day": "Thu", "type": "rest", "title": "", "hook": "", "isRest": true },
+      { "day": "Fri", "type": "ugc", "title": "Brand integration test", "hook": "Product naturally integrated into a phrase-led or Sicily POV Reel", "cta": "→ link bio" },
+      { "day": "Sat", "type": "reel", "title": "\"Things I learned living in Sicily\"", "hook": "Useful, funny, saveable culture observations", "cta": "→ guide" },
+      { "day": "Sun", "type": "rest", "title": "", "hook": "", "isRest": true }
+    ],
+    "strategies": [
+      { "icon": "🎯", "title": "Phrase First", "desc": "Lead with the pattern people already recognize: \"In Italy we say...\", \"In Brazil we say...\" or \"Nobody tells you this about Sicily...\"." },
+      { "icon": "🔁", "title": "Repeatable Series", "desc": "Turn the strongest jokes and observations into recurring formats. The account grows when viewers know exactly what kind of cultural humor they will get next." },
+      { "icon": "💸", "title": "Natural Brand Fit", "desc": "Integrate brands into the same formats already working: language jokes, Sicily POVs, expat tools, local food moments and practical travel tips." }
+    ]
+  },
+  "passwordGate": {
+    "title": "Restricted content",
+    "desc": "Enter the password to access the calendar.",
+    "placeholder": "Password",
+    "submit": "Enter",
+    "loading": "Verifying...",
+    "error": "Wrong password. Try again."
+  }
+}

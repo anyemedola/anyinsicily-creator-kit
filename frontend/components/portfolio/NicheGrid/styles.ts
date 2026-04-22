@@ -18,7 +18,7 @@ export const Card = styled('div')({
     padding: 20,
     transition: 'box-shadow 0.2s, transform 0.2s',
     '&:hover': {
-        boxShadow: '0 4px 20px rgba(196,120,74,0.12)',
+        boxShadow: '0 4px 20px rgba(196,53,96,0.15)',
         transform: 'translateY(-2px)',
     },
 });

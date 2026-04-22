@@ -23,7 +23,15 @@ export const H1 = styled('h1')({
     marginBottom: 16,
     '& em': {
         fontStyle: 'italic',
-        color: palette.rose,
+        color: palette.lemon,
+    },
+});
+
+export const InstagramLink = styled('a')({
+    color: 'inherit',
+    textDecoration: 'none',
+    '&:hover em': {
+        color: palette.sea,
     },
 });
 
@@ -35,21 +43,27 @@ export const Lead = styled('p')({
 });
 
 export const StatsCard = styled('div')({
-    background: 'linear-gradient(145deg, #C97A7A 0%, #D4717B 50%, #C4784A 100%)',
+    background: 'linear-gradient(145deg, #6ECFB8 0%, #2E8E79 45%, #C43560 100%)',
     borderRadius: 16,
     padding: 28,
     color: 'white',
     position: 'relative',
     overflow: 'hidden',
-    boxShadow: '0 12px 40px rgba(196,120,74,0.28)',
+    boxShadow: '0 12px 40px rgba(196,53,96,0.22)',
     '&::before': {
-        content: '"🌊"',
+        content: '"🍋"',
         position: 'absolute',
         right: 20,
         top: 16,
         fontSize: 52,
-        opacity: 0.12,
+        opacity: 0.15,
     },
+});
+
+export const CardTitleLink = styled('a')({
+    color: 'inherit',
+    textDecoration: 'underline',
+    textUnderlineOffset: 3,
 });
 
 export const CardTitle = styled('div')({

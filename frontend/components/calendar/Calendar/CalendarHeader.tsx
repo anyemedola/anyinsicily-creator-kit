@@ -1,18 +1,15 @@
 'use client';
 
 import * as S from './styles';
-import { useLang } from '@/lib/i18n/LangContext';
+import Translator from '@/components/translator-i18n';
 
 export default function CalendarHeader() {
-  const { dict } = useLang();
-  const { header } = dict.calendar;
-
   return (
     <S.Root>
       <S.H2>
-        {header.title}<br /><em>{header.titleEm}</em>
+        <Translator path="calendar.header.title" /><br /><em><Translator path="calendar.header.titleEm" /></em>
       </S.H2>
-      <S.Lead>{header.lead}</S.Lead>
+      <S.Lead><Translator path="calendar.header.lead" /></S.Lead>
     </S.Root>
   );
 }

@@ -14,6 +14,18 @@ export const FooterRoot = styled('footer')({
     zIndex: 1,
 });
 
-export const Accent = styled('span')({
-    color: palette.rose,
+export const Accent = styled('a')({
+    color: palette.lemon,
+    textDecoration: 'none',
+    '&:hover': {
+        color: palette.sea,
+    },
+});
+
+export const Link = styled('a')({
+    color: 'inherit',
+    textDecoration: 'none',
+    '&:hover': {
+        color: palette.lemon,
+    },
 });

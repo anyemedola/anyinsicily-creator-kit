@@ -19,7 +19,7 @@ export const Card = styled('div')({
     alignItems: 'flex-start',
     transition: 'box-shadow 0.2s',
     '&:hover': {
-        boxShadow: '0 4px 16px rgba(196,120,74,0.1)',
+        boxShadow: '0 4px 16px rgba(196,53,96,0.12)',
     },
 });
 
@@ -27,7 +27,7 @@ export const Number = styled('div')({
     fontFamily: playfair.style.fontFamily,
     fontSize: 28,
     fontStyle: 'italic',
-    color: palette.pinkLight,
+    color: palette.lemonLight,
     lineHeight: 1,
     flexShrink: 0,
     width: 32,

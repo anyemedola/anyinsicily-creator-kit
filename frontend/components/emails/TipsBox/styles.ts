@@ -3,9 +3,9 @@ import { palette } from '@/lib/theme';
 import { dmMono } from '@/lib/fonts';
 
 export const Box = styled('div')({
-    background: '#FFFAF5',
-    border: `1px solid #F0DCC8`,
-    borderLeft: `3px solid ${palette.gold}`,
+    background: palette.lemonPale,
+    border: `1px solid ${palette.border}`,
+    borderLeft: `3px solid ${palette.lemon}`,
     borderRadius: 12,
     padding: '22px 24px',
 });
@@ -15,7 +15,7 @@ export const Title = styled('h4')({
     fontSize: 10,
     letterSpacing: '0.18em',
     textTransform: 'uppercase',
-    color: palette.gold,
+    color: palette.lemon,
     marginBottom: 14,
 });
 
@@ -35,6 +35,6 @@ export const Item = styled('li')({
         content: '"→"',
         position: 'absolute',
         left: 0,
-        color: palette.gold,
+        color: palette.lemon,
     },
 });

@@ -1,0 +1,288 @@
+{
+  "nav": {
+    "portfolio": "Portfolio",
+    "pitchEmails": "Pitch Emails",
+    "calendar": "Calendário"
+  },
+  "home": {
+    "eyebrow": "UGC Creator Portfolio — 2026",
+    "viralContent": "Estudos de Caso",
+    "contentNiches": "Nichos de Conteúdo",
+    "availableFormats": "Formatos Disponíveis",
+    "hero": {
+      "lead": "Criadora brasileira na Sicília transformando expressões italianas, choque cultural, vida de expat e viagem mediterrânea em Reels rápidos, engraçados e em inglês para quem ama a Itália além do cartão-postal.",
+      "statsTitle": "Métricas · @anyinsicily",
+      "stats": [
+        { "label": "Total de visualizações", "value": "4", "sup": "M+" },
+        { "label": "Melhor reel (orgânico)", "value": "3", "sup": "M+" },
+        { "label": "2º reel viral", "value": "754", "sup": "K+" },
+        { "label": "3º reel viral", "value": "291", "sup": "K+" },
+        { "label": "Idiomas do conteúdo", "value": "Inglês / Português / Italiano", "small": true }
+      ]
+    },
+    "proof": {
+      "label": "Prova de portfolio",
+      "kicker": "Como eu trabalho",
+      "title": "Conteúdo precisa funcionar, não só parecer bonito.",
+      "lead": "EDe situações reais para ideias que viram série. Simples, claro e direto.",
+      "items": [
+        {
+          "label": "Pensamento",
+          "title": "Momentos do dia a dia que todo mundo reconhece.",
+          "desc": "Situações reais que viram conteúdo imediato."
+        },
+        {
+          "label": "Problema",
+          "title": "Atenção sem interromper.",
+          "desc": "Conteúdo que parece natural, não anúncio."
+        },
+        {
+          "label": "Range",
+          "title": "Ideias que viram formatos.",
+          "desc": "Um conceito, várias direções."
+        },
+        {
+          "label": "Marca",
+          "title": "Um ponto de vista claro.",
+          "desc": "Consistente, observador, real."
+        }
+      ]
+    },
+    "audience": {
+      "heading": "Quem",
+      "headingLine2": "assiste",
+      "headingEm": "Any.",
+      "labels": [
+        "Amantes da Itália", "Viajantes curiosos pela Sicília", "Fãs de humor cultural", "Falantes de inglês",
+        "Aspirantes a expat", "Diáspora brasileira EU", "Estudantes de idiomas", "Nômades digitais",
+        "Maioria feminina", "Alta intenção de compartilhar", "Valoriza personalidade real"
+      ]
+    },
+    "niches": [
+      { "icon": "🍋", "title": "Comédia com Expressões Italianas", "desc": "Momentos em italiano que as pessoas reconhecem na hora. Feito para compartilhamento e séries." },
+      { "icon": "✈️", "title": "Sicília & Vida Local", "desc": "O dia a dia na Sicília, além do turístico. Onde marcas entram de forma natural." },
+      { "icon": "💡", "title": "Recomeçando fora do país", "desc": "Momentos reais de construir uma vida no exterior. Honesto, próximo e contínuo." },
+      { "icon": "🌍", "title": "POV Brasileira na Itália", "desc": "Pequenas diferenças culturais que chamam atenção. Leve, específico e real." },
+      { "icon": "💻", "title": "Vida Digital & Ferramentas", "desc": "O que realmente ajuda no dia a dia fora do país. Simples, útil e salvável." },
+      { "icon": "🛒", "title": "Lifestyle Reviews", "desc": "Coisas que eu realmente uso no dia a dia. Integrado, sem parecer publi." }
+    ],
+    "formats": [
+      { "n": "01", "title": "Reels com Expressões", "desc": "Momentos em italiano que viram séries e geram identificação imediata." },
+      { "n": "02", "title": "POV / Dia na Sicília", "desc": "Vida real no dia a dia, não turismo produzido. Onde marcas entram de forma natural." },
+      { "n": "03", "title": "Review Honesta / Real Take", "desc": "Opiniões com humor e contexto. Pessoal, espontâneo e sem parecer roteiro." },
+      { "n": "04", "title": "Brasil vs Itália", "desc": "Diferenças culturais rápidas entre hábitos, linguagem e cotidiano." }
+      ],
+    "viral": {
+      "viewsLabel": "views",
+      "hookLabel": "Gancho",
+      "insightLabel": "Por que funciona",
+      "brandFitLabel": "Encaixe para marcas",
+      "cases": [
+        {
+  "badge": "Prova de série",
+  "topic": "Reels com expressões em italiano",
+  "hook": "\"Na Itália a gente diz...\"",
+  "insight": "Formato altamente compartilhável: linguagem + identidade + humor logo nos primeiros segundos.",
+  "brandFit": "Adaptável para apps de viagem, marcas de comida, ferramentas de idioma e produtos de lifestyle."
+},
+{
+  "badge": "Teste de formato",
+  "topic": "POV / Um dia na Sicília",
+  "hook": "Uma manhã simples de sexta na Sicília.",
+  "insight": "Nada dramático — só um momento real onde as pessoas gostariam de estar. Cria uma sensação calma de “queria estar lá”.",
+  "brandFit": "Marcas de viagem, lifestyle, bem-estar e moda que se encaixam na rotina real."
+},
+{
+  "badge": "Estudo de caso",
+  "topic": "Opinião real / visão sincera",
+  "hook": "O jeito que estacionam aqui não faz sentido — mas funciona.",
+  "insight": "Uma opinião real com humor e contexto. Parece uma conversa, não um roteiro.",
+  "brandFit": "Marcas que valorizam autenticidade e conteúdo com personalidade."
+},
+{
+  "badge": "Formato viral",
+  "topic": "Brasil x Itália",
+  "hook": "Coisas que parei de fazer depois de me mudar para a Sicília.",
+  "insight": "Mostra diferenças culturais através de mudanças reais de comportamento. Gera identificação, reflexão e muitos saves e compartilhamentos.",
+  "brandFit": "Marcas de viagem, lifestyle e voltadas para quem mora fora."
+}
+      ]
+    }
+  },
+  "emails": {
+    "eyebrow": "Templates Prontos",
+    "header": {
+      "title": "Pitch Emails",
+      "titleEm": "para Marcas",
+      "lead": "Preencha seu perfil de creator, marca, audiência, estilo e métricas. O subject e o corpo do email usam essas informações, e depois você pode gerar uma versão mais forte com IA.",
+      "highlight": "",
+      "leadEnd": ""
+    },
+    "card": {
+      "copy": "Copiar Email",
+      "copied": "✓ Copiado!",
+      "generate": "Gerar com IA",
+      "generating": "Gerando...",
+      "toLabel": "Para",
+      "brandLabel": "Marca",
+      "toPlaceholder": "Nome / Time de Marketing",
+      "brandPlaceholder": "Nome da marca",
+      "creatorNameLabel": "Seu nome",
+      "creatorNamePlaceholder": "ex. Alex",
+      "subjectPlaceholder": "Subject gerado",
+      "handleLabel": "Seu arroba",
+      "handlePlaceholder": "ex. @alexcreates",
+      "locationLabel": "Localização",
+      "locationPlaceholder": "ex. Lisboa, Portugal",
+      "linkLabel": "Link",
+      "linkPlaceholder": "Portfolio, media kit, link da bio ou WhatsApp",
+      "audienceLabel": "Audiência",
+      "audiencePlaceholder": "ex. viajantes Gen Z, novos expats, food lovers",
+      "contentStyleLabel": "Estilo do conteúdo",
+      "contentStylePlaceholder": "ex. Reels engraçados, reviews honestas, B-roll estético",
+      "metricsLabel": "Métricas",
+      "metricsPlaceholder": "ex. 25K seguidores, 1.2M views/mês, 8% engajamento",
+      "signatureLabel": "Assinatura editável",
+      "signaturePlaceholder": "Adicione seu nome, arroba, portfolio, localização ou WhatsApp"
+    },
+    "tips": {
+      "title": "✦ Tips para Enviar",
+      "items": [
+        "Procure o nome do Marketing Manager ou Brand Partnerships no LinkedIn antes de enviar — aumenta muito a taxa de resposta",
+        "Envie para emails diretos (nome@empresa.com), não o contato@empresa.com genérico",
+        "Adicione 2–3 screenshots das métricas ou um link para este portfólio",
+        "Follow up em 5–7 dias se não tiver resposta — a maioria das conversões vem no segundo contato",
+        "Comece por marcas pequenas e médias — são mais fáceis de fechar e constroem seu portfólio UGC",
+        "Ofereça um primeiro vídeo gifted para marcas menores — facilita entrar e testar a parceria"
+      ]
+    },
+    "templates": [
+      {
+        "tag": "💳 Fintech / Expat Services — Wise, Revolut, N26",
+        "subject": "Assunto: UGC x [Brand] | Creator de [Nicho] | [Métrica]",
+        "segments": [
+          { "type": "text", "content": "Olá " },
+          { "type": "placeholder", "content": "[Nome / Time de Marketing]" },
+          { "type": "text", "content": ",\n\nSou " },
+          { "type": "placeholder", "content": "[Nome do creator]" },
+          { "type": "text", "content": " — creator/UGC creator baseado em " },
+          { "type": "placeholder", "content": "[Localização]" },
+          { "type": "text", "content": ". Crio " },
+          { "type": "strong", "content": "[estilo de conteúdo]" },
+          { "type": "text", "content": " para " },
+          { "type": "strong", "content": "[audiência]" },
+          { "type": "text", "content": ". Minhas métricas atuais são " },
+          { "type": "strong", "content": "[métrica principal]" },
+          { "type": "text", "content": ", e minha audiência salva, compartilha e usa ferramentas que facilitam dinheiro, viagem ou rotina.\n\n" },
+          { "type": "strong", "content": "Por que " },
+          { "type": "placeholder", "content": "[Brand]" },
+          { "type": "strong", "content": " faz sentido para a minha audiência:" },
+          { "type": "text", "content": "\nO produto de vocês entra naturalmente no tipo de conteúdo que minha audiência já assiste: ferramentas práticas, decisões financeiras, planejamento de viagem, vida internacional, pagamentos, orçamento ou solução de problemas do dia a dia.\n\n" },
+          { "type": "strong", "content": "O que ofereço:" },
+          { "type": "text", "content": "\n→ 1 x Reel/TikTok com gancho nativo + integração natural do produto\n→ 1 x Sequência de Stories com link ou CTA\n→ Arquivos brutos incluídos para reutilização da marca\n\n" },
+          { "type": "strong", "content": "3 ideias de conteúdo que tenho para " },
+          { "type": "placeholder", "content": "[Brand]" },
+          { "type": "strong", "content": ":" },
+          { "type": "text", "content": "\n1. \"3 erros de dinheiro que eu queria ter evitado antes\" — [Product] como solução prática\n2. \"A ferramenta que facilita [problema da audiência]\" — formato lista autêntica\n3. \"Antes e depois de usar [Brand]\" — Reel problema/solução feito para salvar\n\nDisponível para compartilhar minha tabela de preços e conversar. Adoraria explorar essa parceria!" }
+        ],
+        "signature": "Abraços,\n[Nome do creator]\n[Arroba] | [Portfolio / Link]"
+      },
+      {
+        "tag": "✈️ Travel / Accommodation — Booking, Airbnb, Omio, Trainline",
+        "subject": "Assunto: UGC x [Brand] | Creator de Viagem para [Audiência]",
+        "segments": [
+          { "type": "text", "content": "Olá " },
+          { "type": "placeholder", "content": "[Nome]" },
+          { "type": "text", "content": ",\n\nMe chamo " },
+          { "type": "placeholder", "content": "[Nome do creator]" },
+          { "type": "text", "content": " — creator baseado em " },
+          { "type": "placeholder", "content": "[Localização]" },
+          { "type": "text", "content": " criando " },
+          { "type": "strong", "content": "[estilo de conteúdo]" },
+          { "type": "text", "content": " para " },
+          { "type": "strong", "content": "[audiência]" },
+          { "type": "text", "content": ". Minhas métricas atuais são " },
+          { "type": "strong", "content": "[métrica principal]" },
+          { "type": "text", "content": ", e minha audiência salva conteúdo de viagem, hospedagem e planejamento.\n\nAdoraria criar UGC para " },
+          { "type": "placeholder", "content": "[Brand]" },
+          { "type": "text", "content": " que se sinta genuinamente útil em vez de parecer publicidade.\n\n" },
+          { "type": "strong", "content": "Conteúdo que posso criar:" },
+          { "type": "text", "content": "\n1. \"Coisas que ninguém te conta antes de reservar [destino/tipo de viagem]\" — integrando " },
+          { "type": "placeholder", "content": "[Brand]" },
+          { "type": "text", "content": " naturalmente como a ferramenta que uso\n2. \"Um dia realista de viagem usando [Brand]\" — formato POV com momentos de reserva mostrados naturalmente\n3. \"Como eu planejaria essa viagem diferente da próxima vez\" — Reel útil e salvável com CTA da marca\n\nMeu conteúdo performa melhor quando parece honesto, útil e nativo da plataforma — exatamente o que audiências de viagem confiam. Produzo e entrego arquivos brutos + editados que vocês podem usar em todos os canais.\n\nTopam uma call rápida ou querem que eu mande minha tabela de preços?" }
+        ],
+        "signature": "[Nome do creator]\n[Arroba] | [Localização]"
+      },
+      {
+        "tag": "🫒 Comida Italiana & Lifestyle — azeites, massas, marcas regionais",
+        "subject": "Assunto: UGC x [Brand] | Creator de Food & Lifestyle | [Audiência]",
+        "segments": [
+          { "type": "text", "content": "Olá " },
+          { "type": "placeholder", "content": "[Nome]" },
+          { "type": "text", "content": ",\n\nSou " },
+          { "type": "placeholder", "content": "[Nome do creator]" },
+          { "type": "text", "content": " — creator baseado em " },
+          { "type": "placeholder", "content": "[Localização]" },
+          { "type": "text", "content": " criando " },
+          { "type": "strong", "content": "[estilo de conteúdo]" },
+          { "type": "text", "content": " para " },
+          { "type": "strong", "content": "[audiência]" },
+          { "type": "text", "content": ". Minhas métricas atuais são " },
+          { "type": "strong", "content": "[métrica principal]" },
+          { "type": "text", "content": ".\n\nEstou entrando em contato porque acho que " },
+          { "type": "placeholder", "content": "[Brand/Produto]" },
+          { "type": "text", "content": " ressoaria genuinamente com minha audiência — pessoas que amam a Itália, são curiosas sobre a cultura, ou já moram aqui.\n\n" },
+          { "type": "strong", "content": "O que torna meu conteúdo diferente:" },
+          { "type": "text", "content": "\nMeu conteúdo funciona porque parece nativo para minha audiência: pessoal, útil, visualmente claro e construído em momentos reais de lifestyle, sem parecer anúncio forçado.\n\n" },
+          { "type": "strong", "content": "O que posso criar:" },
+          { "type": "text", "content": "\n→ \"Você precisa provar " },
+          { "type": "placeholder", "content": "[Produto]" },
+          { "type": "text", "content": "\" — formato com gancho e integração de produto\n→ Um momento de receita, refeição ou rotina com o produto de vocês\n→ \"O que [Produto] adiciona à minha rotina/viagem/casa\" — storytelling de lifestyle\n\nO conteúdo pode ser produzido para post orgânico, anúncios pagos ou whitelisting. Direitos de uso podem ser incluídos dependendo do escopo." }
+        ],
+        "signature": "Com carinho,\n[Nome do creator]\n[Arroba]"
+      }
+    ]
+  },
+  "calendar": {
+    "eyebrow": "Estratégia de Conteúdo",
+    "header": {
+      "title": "Calendário",
+      "titleEm": "2 Semanas",
+      "lead": "Semana 1 foca em retomar momentum com formatos virais comprovados. Semana 2 ativa as frentes de monetização. 5 posts por semana, 2 dias de descanso."
+    },
+    "week1Label": "Semana 1 — Retomar o momentum",
+    "week2Label": "Semana 2 — Monetização + Funil",
+    "strategy": "Estratégia",
+    "week1": [
+      { "day": "Segunda", "type": "reel", "title": "Série de expressões italianas", "hook": "\"In Italy we say...\" nova versão com gesto, expressão ou cena do dia a dia", "cta": "→ Instagram" },
+      { "day": "Terça", "type": "stories", "title": "Bastidores + Poll", "hook": "\"Qual expressão italiana eu explico agora?\" + caixinha" },
+      { "day": "Quarta", "type": "reel", "title": "POV brasileira na Sicília", "hook": "\"Coisas que ainda me confundem na Itália\" — choque cultural relatable", "cta": "→ link bio" },
+      { "day": "Quinta", "type": "rest", "title": "", "hook": "", "isRest": true },
+      { "day": "Sexta", "type": "carousel", "title": "5 coisas que ninguém conta sobre a Sicília", "hook": "Mini guia salvável para viajantes e futuros expats", "cta": "→ guide" },
+      { "day": "Sábado", "type": "reel", "title": "POV cidade siciliana", "hook": "\"Um dia normal aqui parece mentira\" — Reel de vida local" },
+      { "day": "Domingo", "type": "rest", "title": "", "hook": "", "isRest": true }
+    ],
+    "week2": [
+      { "day": "Segunda", "type": "reel", "title": "\"In Brazil we say / in Italy we say\"", "hook": "Contraste de idioma — alto compartilhamento", "cta": "→ Instagram" },
+      { "day": "Terça", "type": "stories", "title": "Q&A de viagem", "hook": "\"Me pergunta qualquer coisa sobre a Sicília\" — captar FAQs para guias", "cta": "→ guide" },
+      { "day": "Quarta", "type": "reel", "title": "POV mercado italiano", "hook": "\"Fui ao mercado e aprendi uma palavra sem querer\" — humor intercultural" },
+      { "day": "Quinta", "type": "rest", "title": "", "hook": "", "isRest": true },
+      { "day": "Sexta", "type": "ugc", "title": "Teste de integração com marca", "hook": "Produto integrado naturalmente em Reel de expressão italiana ou POV Sicília", "cta": "→ link bio" },
+      { "day": "Sábado", "type": "reel", "title": "\"Coisas que aprendi morando na Sicília\"", "hook": "Observações culturais úteis, engraçadas e salváveis", "cta": "→ guide" },
+      { "day": "Domingo", "type": "rest", "title": "", "hook": "", "isRest": true }
+    ],
+    "strategies": [
+      { "icon": "🎯", "title": "Expressão Primeiro", "desc": "Comece pelo padrão que o público já reconhece: \"In Italy we say...\", \"In Brazil we say...\" ou \"Nobody tells you this about Sicily...\"." },
+      { "icon": "🔁", "title": "Séries Repetíveis", "desc": "Transforme as melhores piadas e observações em formatos recorrentes. O perfil cresce quando as pessoas sabem que tipo de humor cultural vão receber." },
+      { "icon": "💸", "title": "Marca com Encaixe Natural", "desc": "Integre marcas nos formatos que já funcionam: piadas de idioma, POVs da Sicília, ferramentas de expat, comida local e dicas práticas de viagem." }
+    ]
+  },
+  "passwordGate": {
+    "title": "Conteúdo restrito",
+    "desc": "Insira a senha para acessar o calendário.",
+    "placeholder": "Senha",
+    "submit": "Entrar",
+    "loading": "Verificando...",
+    "error": "Senha incorreta. Tente novamente."
+  }
+}

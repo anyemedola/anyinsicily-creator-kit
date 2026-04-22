@@ -1,26 +1,35 @@
 "use client";
 
-import * as S from './styles';
 import { useEffect, useState } from "react";
+import { CursorWrapper } from "./styles";
 
 export default function LemonCursor() {
-    const [pos, setPos] = useState({ x: 0, y: 0 });
+  const [mounted, setMounted] = useState(false);
+  const [pos, setPos] = useState({ x: 0, y: 0 });
 
-    useEffect(() => {
-        const move = (e) => {
-            setPos({ x: e.clientX, y: e.clientY });
-        };
+  useEffect(() => {
+    setMounted(true);
 
-        window.addEventListener("mousemove", move);
-        return () => window.removeEventListener("mousemove", move);
-    }, []);
+    const move = (e: MouseEvent) => {
+      setPos({
+        x: e.clientX,
+        y: e.clientY,
+      });
+    };
 
-    return (
-        <S.CursorWrapper style={{ left: pos.x, top: pos.y }}>
-            <S.Lemon>
-                <S.Stem />
-                <S.Shine />
-            </S.Lemon>
-        </S.CursorWrapper>
-    );
+    window.addEventListener("mousemove", move);
+    return () => window.removeEventListener("mousemove", move);
+  }, []);
+
+  if (!mounted) return null;
+
+  return (
+    <CursorWrapper
+      style={{
+        transform: `translate(${pos.x}px, ${pos.y}px) translate(-50%, -50%)`,
+      }}
+    >
+      🍋
+    </CursorWrapper>
+  );
 }
