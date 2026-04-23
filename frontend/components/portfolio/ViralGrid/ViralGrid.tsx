@@ -16,7 +16,7 @@ interface ViralCase {
 const viralContent = [
   {
     video: '/videos/video2.mp4',
-    views: '754K+',
+    views: '760K+',
     link: 'https://www.instagram.com/p/DV5qnEjN2QJ/',
     gradient: 'linear-gradient(160deg, #0d1f2d 0%, #1a3a52 100%)',
   },
@@ -56,65 +56,64 @@ export default function ViralGrid() {
 
   return (
     <S.Grid>
-  {viralContent.map((item, index) => {
-    const caseItem = cases[index];
-    if (!caseItem) return null;
+      {viralContent.map((item, index) => {
+        const caseItem = cases[index];
+        if (!caseItem) return null;
 
-    return (
-      <a
-        key={index}
-        href={item.link}
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{ textDecoration: 'none' }}
-      >
-        <S.Card gradient={item.gradient}>
-          
-          {/* MEDIA */}
-          {item.type === 'carousel' ? (
-            <img
-              src={item.images[0]}
-              className="video"
-              width="100%"
-              alt="carousel preview"
-            />
-          ) : (
-            <video
-              src={item.video}
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="metadata"
-              className="video"
-              width="100%"
-            />
-          )}
+        return (
+          <a
+            key={index}
+            href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: 'none' }}
+          >
+            <S.Card gradient={item.gradient}>
+              {/* MEDIA */}
+              {item.type === 'carousel' ? (
+                <img
+                  src={item.images[0]}
+                  className="video"
+                  width="100%"
+                  alt="carousel preview"
+                />
+              ) : (
+                <video
+                  src={item.video}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  className="video"
+                  width="100%"
+                />
+              )}
 
-          <S.Content>
-            <S.Badge>{caseItem.badge}</S.Badge>
-            <S.Views>{item.views}</S.Views>
-            <S.ViewsLabel>
-              <Translator path="home.viral.viewsLabel" />
-            </S.ViewsLabel>
-            <S.Topic>{caseItem.topic}</S.Topic>
+              <S.Content>
+                <S.Badge>{caseItem.badge}</S.Badge>
+                <S.Views>{item.views}</S.Views>
+                <S.ViewsLabel>
+                  <Translator path="home.viral.viewsLabel" />
+                </S.ViewsLabel>
+                <S.Topic>{caseItem.topic}</S.Topic>
 
-            <S.Detail>
-              <strong><Translator path="home.viral.hookLabel" />:</strong> {caseItem.hook}
-            </S.Detail>
+                <S.Detail>
+                  <strong><Translator path="home.viral.hookLabel" />:</strong> {caseItem.hook}
+                </S.Detail>
 
-            <S.Detail>
-              <strong><Translator path="home.viral.insightLabel" />:</strong> {caseItem.insight}
-            </S.Detail>
+                <S.Detail>
+                  <strong><Translator path="home.viral.insightLabel" />:</strong> {caseItem.insight}
+                </S.Detail>
 
-            <S.Detail>
-              <strong><Translator path="home.viral.brandFitLabel" />:</strong> {caseItem.brandFit}
-            </S.Detail>
-          </S.Content>
-        </S.Card>
-      </a>
-    );
-  })}
-</S.Grid>
+                <S.Detail>
+                  <strong><Translator path="home.viral.brandFitLabel" />:</strong> {caseItem.brandFit}
+                </S.Detail>
+              </S.Content>
+            </S.Card>
+          </a>
+        );
+      })}
+    </S.Grid>
   );
 }
